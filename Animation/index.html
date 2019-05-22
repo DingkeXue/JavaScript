@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动画性能问题</title>
+</head>
+<body>
+<div class="header">
+    <h2>在考虑 JavaScript 动画性能的时候，我们常用的是 setTimeInterval ，但是该函数是异步的，可能在执行的时候
+    存在堵塞问题使得不能在规定时间内执行，最终导致动画卡顿。于是有了硬件层面的 requestAnimationFrame，该函数
+    执行时间为 1000ms/60Hz = 16.7ms</h2>
+</div>
+<div class="content">
+    <h2>setInterval 实现  距离2219年还有：</h2>
+    <h2 id="time"></h2>
+    <h2>requestAnimationFrame 实现  距离2219年还有：</h2>
+    <h2 id="time2"></h2>
+</div>
+<script src="setInterval.js"></script>
+<script src="requestAnimationFrame.js"></script>
+</body>
+</html>
