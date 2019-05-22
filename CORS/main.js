@@ -37,13 +37,14 @@ xhr.send();*/
 
 // 兼容模式
 function createCorsRequest(method, url) {
-    var xhr;
-    if (XMLHttpRequest) {
-        xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
+    if ('withCredentials' in xhr) {
         xhr.open(method, url, true);
-    } else {  // 兼容 IE 8
+    } else if (typeof XDomainRequest != 'undefined'){  // 兼容 IE 8
         xhr = new XDomainRequest();
         xhr.open(method, url);
+    } else {
+        xhr = null;
     }
     return xhr;
 }
