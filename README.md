@@ -1,2 +1,3 @@
 # JavaScript
 > 主要是总结了平时在使用 JavaScript 中遇到的一些常见问题和解决方案，不断更新中...
+1. WebSocket 原理以及如何使用
