@@ -1,7 +1,6 @@
 (function () {
     let btn = document.getElementById('btn');
 
-
     // fn 是回调函数，delay 是延时时间
     function throttle(fn, delay) {
         // last 为上次触发时间，timer 为定时器
