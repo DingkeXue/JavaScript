@@ -6,7 +6,7 @@
     function throttle(fn, delay) {
         // last 为上次触发时间，timer 为定时器
         let last = 0, timer = null;
-
+        // 将throttle处理结果作为函数返回
         return function () {
             // 保留调用时的上下文
             let context = this;
@@ -31,10 +31,10 @@
         }
     }
 
-    let better_throlle = throttle(function () {
+    let better_throttle = throttle(function () {
         console.log("我被触发了");
     }, 1000);
 
-    btn.addEventListener('click', better_throlle);
+    btn.addEventListener('click', better_throttle);
 
 })();
