@@ -1,7 +1,7 @@
 /*
-* 同源策略对 web sockets 不适用
+* 同源策略对 WebSocket 不适用
 * readyState 有四个值
-* WebSocket.OPENING(0): 正在建立连接
+* WebSocket.CONNECTING(0): 连接还未开启
 * WebSocket.OPEN(1): 已建立连接
 * WebSocket.CLOSING(2): 正在关闭连接
 * WebSocket.CLOSE(3): 已经关闭连接
@@ -13,7 +13,7 @@ function WebSocketTest() {
         alert("正在创建WebSocket");
 
         // 创建一个 WebSocket 对象
-        var ws = new WebSocket('ws://localhost:8080'); // 不再是HTTP://   ，传入的路径必须是绝对路径
+        let ws = new WebSocket('ws://localhost:8080'); // 不再是HTTP://   ，传入的路径必须是绝对路径
 
         ws.onopen = function () {
             // 已建立连接
@@ -22,8 +22,8 @@ function WebSocketTest() {
         };
 
         ws.onmessage = function (event) {
-            var msg = event.data; // 传回来的数据在 event 的 data 中
-            alert("已接收数据");
+            let msg = event.data; // 传回来的数据在 event 的 data 中
+            console.log("已接收数据", msg);
         };
 
         ws.onclose = function () {
