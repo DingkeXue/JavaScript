@@ -108,3 +108,33 @@
 /*
 *媒体查询 + transform
 */
+.bottom2 {
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    border: 1px solid #666;
+    text-align: center;
+    padding: 3px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2.0){
+    .bottom2 {
+        padding: 6px;
+        -webkit-transform: scaleY(.5);
+        -moz-transform: scaleY(.5);
+        -ms-transform: scaleY(.5);
+        -o-transform: scaleY(.5);
+        transform: scaleY(.5);
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3.0){
+    .bottom2 {
+        padding: 6px;
+        -webkit-transform: scaleY(.33333);
+        -moz-transform: scaleY(.33333);
+        -ms-transform: scaleY(.33333);
+        -o-transform: scaleY(.33333);
+        transform: scaleY(.33333);
+    }
+}
