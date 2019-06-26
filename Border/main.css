@@ -75,10 +75,36 @@
     top: 0;
     content: '';
     border: 1px solid #666;
-    -webkit-transform: scale(.5);
-    -moz-transform: scale(.5);
-    -ms-transform: scale(.5);
-    -o-transform: scale(.5);
     transform: scale(.5);
     transform-origin: left top;
 }
+
+/*
+*媒体查询利用像素比缩放
+*不过这里 Chrome 存在一个 bug，0.5px 被四舍五入成了 1px，看起来很粗。。。
+*需要对该代码进行修改
+*/
+.bottom {
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    border: 1px solid #666;
+    text-align: center;
+    padding: 3px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    .bottom {
+        border: .5px solid #666;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    .bottom {
+        border: .333333px solid #666;
+    }
+}
+
+/*
+*媒体查询 + transform
+*/
