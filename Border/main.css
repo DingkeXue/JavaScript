@@ -32,11 +32,53 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #ccc;
-    width: 100%;
+    background: #666;
+    width: 200%;
     height: 1px;
     transform: scale(.5);
     transform-origin: 0 0;
     content: '';
 }
 
+/*
+* 圆角边框和四个边框问题
+*/
+.list2,
+.list3 {
+    list-style: none;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.list2 .list-item,
+.list3 .list-item {
+    height: 50px;
+    line-height: 50px;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.list2 .list-item {
+    border: 1px solid #666;
+}
+
+.list3 .list-item {
+    position: relative;
+}
+
+.list3 .list-item:after {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    content: '';
+    border: 1px solid #666;
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -ms-transform: scale(.5);
+    -o-transform: scale(.5);
+    transform: scale(.5);
+    transform-origin: left top;
+}
