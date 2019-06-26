@@ -57,6 +57,7 @@
     margin-top: 10px;
     padding: 10px;
     text-align: center;
+    border-radius: 10px;
 }
 
 .list2 .list-item {
@@ -71,6 +72,7 @@
     position: absolute;
     width: 200%;
     height: 200%;
+    border-radius: 10px;
     left: 0;
     top: 0;
     content: '';
@@ -112,14 +114,13 @@
     width: 100%;
     height: 20px;
     margin-top: 10px;
-    border: 1px solid #666;
+    border-bottom: 1px solid #666;
     text-align: center;
     padding: 3px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2.0){
     .bottom2 {
-        padding: 6px;
         -webkit-transform: scaleY(.5);
         -moz-transform: scaleY(.5);
         -ms-transform: scaleY(.5);
@@ -130,7 +131,6 @@
 
 @media only screen and (-webkit-min-device-pixel-ratio: 3.0){
     .bottom2 {
-        padding: 6px;
         -webkit-transform: scaleY(.33333);
         -moz-transform: scaleY(.33333);
         -ms-transform: scaleY(.33333);
