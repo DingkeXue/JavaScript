@@ -3,26 +3,26 @@
 * 使用 postMessage message 与 worker 进行通信
 * */
 let show = document.querySelector('#show');
-let w;
+let worker;
 
 function startWorker() {
     if (typeof Worker !== 'undefined') {
-        if (typeof w === 'undefined') {
-            w = new Worker('./worker.js');
+        if (typeof worker === 'undefined') {
+            worker = new Worker('./worker.js');
         }
-        
-        w.onmessage = function (event) {
+
+        worker.onmessage = function (event) {
             show.innerHTML = event.data;
         };
-        
-        w.onerror = function (event) {
+
+        worker.onerror = function (event) {
             console.log("ERROR:" + event.filename + 'line:' + event.lineno + 'ERROR MESSAGE:' + event.message);
-        } 
+        }
     } else {
         alert("不支持 Web Workers");
     }
 }
 
 function stopWorker() {
-    w.terminate();
+    worker.terminate();
 }
