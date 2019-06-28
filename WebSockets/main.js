@@ -5,7 +5,7 @@
 * WebSocket.OPEN(1): 已建立连接
 * WebSocket.CLOSING(2): 正在关闭连接
 * WebSocket.CLOSE(3): 已经关闭连接
-* WebSocket 只能发送纯文本数据，所以发送前必须进行序列化
+* WebSocket 只能发送纯文本数据或者二进制，所以发送前必须进行序列化
 * JavaScript高级程序设计中说WebSocket对象不支持 DOM2级事件，只支持 DOM0 级事件
 * */
 function WebSocketTest() {

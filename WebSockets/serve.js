@@ -16,7 +16,7 @@ wss.on('connection', function connection(ws) {
     });
 
     // 发送数据
-    ws.send('server');
+    ws.send('from server');
 });
 
 app.get('/', function (req, res) {
