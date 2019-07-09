@@ -42,3 +42,40 @@ let b2 = new Children2('foo', 18);
 a2.say();
 b2.say();
 b2.sayAge();
+
+// 寄生组合继承
+function inheritPrototype(sub, sup) {
+    let prototype = Object(sup.prototype);
+    // 重写因子类原型导致子类 constructor 属性被修改
+    sub.constructor = sub;
+    // 设置子类的原型
+    sub.prototype = prototype;
+}
+// 定义父类
+function Super(age) {
+    this.age = age;
+}
+Super.prototype.sayAge = function () {
+    console.log(this.age);
+};
+// 定义子类
+function Sub(age, name) {
+    Super.call(this, age);
+    this.name = name;
+}
+
+// 寄生组合继承
+inheritPrototype(Sub, Super);
+
+Sub.prototype.sayName = function () {
+    console.log(this.name);
+};
+
+// 实例
+let a3 = new Super(11);
+let b3 = new Sub(12, 'lbb');
+a3.sayAge();
+b3.sayAge();
+b3.sayName();
+
+
