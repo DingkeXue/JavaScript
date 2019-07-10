@@ -12,3 +12,14 @@ if ('serviceWorker' in navigator) {
             })
     })
 }
+
+fetch('http://bar.other/resources/post-here/')
+    .then(res => {
+        return res.json();
+    })
+    .then(res => {
+        console.log(res);
+    })
+    .catch(err => {
+        console.log(err);
+    });

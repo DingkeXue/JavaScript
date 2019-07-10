@@ -10,3 +10,28 @@ self.addEventListener('install', function (event) {
     )
 });
 
+self.addEventListener('fetch', function (event) {
+   event.respondWith(
+       // 截获fetch 请求，如果缓存中有，直接返回缓存，如果没有，再发起请求
+       caches.match(event.request).then(response => {
+           if (response)
+               return response;
+           // 拷贝原始请求，请求后加到缓存中
+           let request = event.request.clone();
+           return fetch(request).then(response => {
+               // 请求失败的话，直接返回失败的结果
+               if (!response || response.status !== 200)
+                   return response;
+
+               // 请求成功，将请求和响应缓存起来
+               let responseClone = response.clone();
+               caches.open('my-test-cache-v1').then(cache => {
+                   cache.put(request, responseClone);
+               });
+
+               // 向主线程返回响应
+               return response;
+           })
+       })
+   )
+});
