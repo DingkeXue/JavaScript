@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>图片懒加载</title>
+    <style>
+        .wrapper {
+            width: 600px;
+            display: flex;
+            justify-content: center;
+            flex-flow: column wrap;
+            margin: 0 auto;
+        }
+
+        .wrapper:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .wrapper img {
+            width: 100%;
+            height: 260px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <ul class="navbar-nav nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="wrapper">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img1.imgtn.bdimg.com/it/u=3990342075,2367006974&fm=200&gp=0.jpg">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img4.imgtn.bdimg.com/it/u=2539922263,2810970709&fm=200&gp=0.jpg">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img4.imgtn.bdimg.com/it/u=1878067600,3935137756&fm=200&gp=0.jpg">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img2.imgtn.bdimg.com/it/u=3844233833,3942617167&fm=200&gp=0.jpg">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img3.imgtn.bdimg.com/it/u=346230831,1833217134&fm=200&gp=0.jpg">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img5.imgtn.bdimg.com/it/u=3478148120,2683867435&fm=26&gp=0.jpg">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img5.imgtn.bdimg.com/it/u=2298824648,1812234339&fm=200&gp=0.jpg">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img2.imgtn.bdimg.com/it/u=4201594846,4178139206&fm=26&gp=0.jpg">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img2.imgtn.bdimg.com/it/u=484389598,819397330&fm=200&gp=0.jpg">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img1.imgtn.bdimg.com/it/u=3729466012,914166979&fm=26&gp=0.jpg">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img2.imgtn.bdimg.com/it/u=354463615,3836278171&fm=200&gp=0.jpg">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img5.imgtn.bdimg.com/it/u=1831250492,3489827059&fm=200&gp=0.jpg">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img1.imgtn.bdimg.com/it/u=779005622,2247570143&fm=200&gp=0.jpg">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img1.imgtn.bdimg.com/it/u=1968229118,3512711019&fm=26&gp=0.jpg">
+    <img src="http://s4.sinaimg.cn/mw690/006uWPTUgy72CNFYNjB93&690" alt="1" data-src="http://img2.imgtn.bdimg.com/it/u=1088428253,1150170159&fm=200&gp=0.jpg">
+</div>
+
+<script>
+    // 一开始就加载在视窗内的图片
+    start();
+
+    // 节流函数
+    let timer = null;
+    $(window).on('scroll', function () {
+        if (timer) {
+            clearTimeout(timer);
+        }
+        timer = setTimeout(() => {
+            start();
+        }, 200)
+    })
+
+    // 加载函数
+    function start() {
+        $('.wrapper img').not('[data-loaded]').each(function () {
+            if (isShow($(this))) {
+                loadImg($(this));
+            }
+        })
+    }
+
+    // 判断当前图片是否在视窗内
+    function isShow($node) {
+        return $node.offset().top <= $(window).height() + $(window).scrollTop();
+    }
+
+    // 加载图片
+    function loadImg($img) {
+        $img.attr('src', $img.attr('data-src'));
+
+        $img.attr('data-loaded', true);
+    }
+</script>
+</body>
+</html>
