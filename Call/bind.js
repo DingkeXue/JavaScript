@@ -1,5 +1,5 @@
 /*
-* @ 第一个参数为对象，传参挨个传进去
+* @ 第一个参数为对象，传参挨个传进去，用逗号隔开
 * */
 (function () {
     Function.prototype.myBind = function (context) {
