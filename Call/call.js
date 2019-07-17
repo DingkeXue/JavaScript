@@ -5,7 +5,7 @@
 (function () {
     Function.prototype.myCall = function (context) {
         // 确定传入的参数
-        let ctx = context || window;
+        let ctx = JSON.parse(JSON.stringify(context)) || window;
         // 将当前被调用的方法定义在 ctx.func 上
         ctx.func = this;
         // 获取传入的参数
