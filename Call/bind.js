@@ -14,7 +14,6 @@
         return function () {
             // 对bind函数的参数和调用时函数的参数进行合并
             const allArgs = args.concat([...arguments]);
-            console.log(allArgs);
             // 已对象的形式调用 func
             return allArgs.length > 0 ? ctx.func(...allArgs) : ctx.func();
         }
