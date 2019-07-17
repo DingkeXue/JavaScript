@@ -1,5 +1,5 @@
 /*
-* @ 第一个参数为指定的对象，第二个参数为一个数组
+* @ 第一个参数为指定的对象，第个二个参数为数组
 * */
 (function () {
     Function.prototype.myApply = function (context) {
