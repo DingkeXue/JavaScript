@@ -10,7 +10,6 @@
         ctx.func = this;
         // 获取传入的参数
         const args = [...arguments].slice(1);
-        console.log(args);
         // 已对象调用的形式调用func，此时this指向 ctx
         const res = args.length > 0 ? ctx.func(...args) : ctx.func();
         // 删除该方法，不然会对传入对象造成污染
