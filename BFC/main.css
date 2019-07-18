@@ -29,6 +29,9 @@
 }
 
 /*===========阻止元素被浮动元素覆盖==========*/
+.content {
+    margin-top: 100px;
+}
 .float {
     float: left;
     width: 100px;
