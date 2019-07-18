@@ -1,4 +1,26 @@
 /*
 具有BFC特性的元素可以看成是一个独立的容器，里面元素与外界元素互不干扰
-
+形成BFC的条件：
+1. body根元素
+2. 浮动元素：float除none以外的元素
+3. 绝对定位：position(absolute、fixed)
+4. display为inline-block、table-cells、flex
+5. overflow除了visible以外的值
 */
+
+/*
+常见的作用：1. 阻止外边距折叠  2. 包含浮动元素 3. 阻止元素被浮动元素覆盖
+*/
+/* ========1.阻止外边距折叠========*/
+.wrapper {
+    width: 100%;
+}
+.item {
+    background: tomato;
+    width: 100px;
+    height: 100px;
+    /*此时两个item之间的高度为50px,高度重叠了*/
+    margin: 50px;
+    /*触发BFC，此时两个item之间的宽度为100px*/
+    float: left;
+}
