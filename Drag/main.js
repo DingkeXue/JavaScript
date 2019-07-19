@@ -12,5 +12,5 @@ function allowDrop(event) {
 function drop(event) {
     event.preventDefault();
     var data = event.dataTransfer.getData('Text');
-    ev.target.appendChild(document.getElementById(data));
+    event.target.appendChild(document.getElementById(data));
 }
