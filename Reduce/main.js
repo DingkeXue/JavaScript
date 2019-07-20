@@ -17,5 +17,5 @@ let arr3 = [1, 2, 3, 4];
 let arr4 = arr3.reduce((acc, current) => {
     return acc +　current;
 }, 10);
-console.log(arr4); // 20
+console.log(arr4); //  20
 
