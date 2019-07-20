@@ -4,6 +4,7 @@
 * arr.reduce(callback, [initialValue]);
 * */
 let arr = [1, 2, 3, 4];
+// 因为没有给初始值，所以累计器将会使用数组的第一个元素最为初始值，current 和 index 从第二个元素开始
 let arr2 = arr.reduce((accumulator, current, index) => accumulator + current);
 console.log(arr2); // 10
 
