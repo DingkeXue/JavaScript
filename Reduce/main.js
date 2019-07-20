@@ -11,3 +11,11 @@ console.log(arr2); // 10
 // 如果数组中有未定义的值，则直接跳过
 arr = [1, 2, , 4];
 console.log(arr2); // 7
+
+//给定一个初始值
+let arr3 = [1, 2, 3, 4];
+let arr4 = arr3.reduce((acc, current) => {
+    return acc +　current;
+}, 10);
+console.log(arr4); // 20
+
