@@ -20,3 +20,9 @@ Object.is(NaN, NaN); // true
 const target = {a: 1};
 const source = {b: 2};
 Object.assign(target, source);  // target: {a: 1, b: 2}
+
+/*
+* Object.keys: 返回对象的键值
+* Object.values： 返回对象的值
+* Object.entries：返回键值对
+* */
