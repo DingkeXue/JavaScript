@@ -22,7 +22,11 @@ const source = {b: 2};
 Object.assign(target, source);  // target: {a: 1, b: 2}
 
 /*
-* Object.keys: 返回对象的键值
-* Object.values： 返回对象的值
-* Object.entries：返回键值对
+* Object.keys: 返回对象的键值（数组）
+* Object.values： 返回对象的值（数组）
+* Object.entries：返回键值对（数组）
 * */
+let obj = {foo: 'FOO', bar: 'BAR'};
+Object.keys(obj);  // ["foo", "bar"]
+Object.values(obj);  // ["FOO", "BAR"]
+Object.entries(obj);  // [["foo", "FOO"], ["bar", "BAR"]]
