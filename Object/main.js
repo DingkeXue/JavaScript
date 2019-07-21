@@ -12,3 +12,11 @@ console.log(NaN === NaN);  // false
 // ES6
 Object.is(+0, -0); // false
 Object.is(NaN, NaN); // true
+
+/*
+* Object.assign()
+* 用于对象的合并，将源对象的所有可枚举属性复制到目标对象中(浅复制)
+* */
+const target = {a: 1};
+const source = {b: 2};
+Object.assign(target, source);  // target: {a: 1, b: 2}
