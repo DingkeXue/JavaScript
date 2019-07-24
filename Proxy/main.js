@@ -1,7 +1,7 @@
 /*
 * 监听一个对象的方法
 * Object.defineProperty(obj, prop, descriptor)：只能监听 obj 上已有属性
-* Proxy：可以理解成在目标之前架设一层 拦截，对象访问或者设置该对象，都必须通过这个拦截
+* Proxy(target, handle)：可以理解成在目标之前架设一层 拦截，对象访问或者设置该对象，都必须通过这个拦截
 * */
 // Object.defineProperty()
 function Test() {
