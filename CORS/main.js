@@ -44,7 +44,7 @@ function createCorsRequest(method, url) {
         xhr = new XDomainRequest();
         xhr.open(method, url);
     } else {
-        xhr = null;
+        xhr = new ActiveXObject('Microsoft.XMLHTTP');
     }
     return xhr;
 }
