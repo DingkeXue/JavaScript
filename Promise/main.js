@@ -17,3 +17,14 @@ function ajax(url) {
         xhr.send(null);
     })
 }
+
+/*打印属性*/
+const promise = new Promise(((resolve, reject) => {
+    console.log('a');
+    resolve();
+    console.log('b');
+}));
+promise.then(() => {
+    console.log('c');
+});
+console.log('d'); // output: a b d c
