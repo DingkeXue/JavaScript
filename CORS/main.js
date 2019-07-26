@@ -67,7 +67,7 @@ window.onload = function () {
                       }
                   }
               }
-          } else { // XDR
+          } else { // XDR没有statechange事件
               xhr.onload = function () {
                   text.innerText = xhr.responseText;
               };
