@@ -33,3 +33,13 @@ function test() {
 let get = test();
 console.log(name);  // undefined
 console.log(get()); // test
+
+// 利用ES6块级作用域
+{
+    let name = 'bar';
+    window.getname = function () {
+        return name;
+    }
+}
+console.log(name);
+console.log(getname());
