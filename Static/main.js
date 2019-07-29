@@ -11,7 +11,7 @@
 console.log(name); // undefined
 console.log(getName()); // FOO
 
-// 方法二
+// 方法二：这里其实并没有定义name变量，还待确认
 function Person(name) {
     this.getName = function () {
         return name;
