@@ -34,7 +34,6 @@ xhr.onreadystatechange = function () {
 };
 xhr.open('POST', "http://wpdic.com/cors.php");
 xhr.send();*/
-
 // 兼容模式
 function createCorsRequest(method, url) {
     var xhr = new XMLHttpRequest();

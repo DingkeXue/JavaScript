@@ -6,8 +6,23 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CORS跨域请求</title>
+    <style>
+        .container {
+            display: flex;
+            height: 300px;
+            align-items: center;
+            background: #ccc;
+        }
+        .target {
+            height: 12px;
+            line-height: 12px;
+        }
+    </style>
 </head>
 <body>
+<div class="container">
+    <div class="target">居住</div>
+</div>
 <button id="btn">点我触发CORS</button>
 <p id="text"></p>
 <script src="main.js"></script>
