@@ -31,7 +31,7 @@
         return function () {
             // 现在触发时间、保留this、arguments
             let now = +new Date(), context = this, args = arguments;
-            // 判断时间间隔是否小于指定的时间间隔
+            // 判断时间间隔是否大于指定的时间间隔
             if (now - last >= delay) {
                 // 如果大于等于则触发回调函数
                 last = now;
