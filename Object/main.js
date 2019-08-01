@@ -30,3 +30,8 @@ let obj = {foo: 'FOO', bar: 'BAR'};
 Object.keys(obj);  // ["foo", "bar"]
 Object.values(obj);  // ["FOO", "BAR"]
 Object.entries(obj);  // [["foo", "FOO"], ["bar", "BAR"]]
+
+/*ES5 中 Object.defineProperty(target, key, descriptor)*/
+Object.defineProperty(obj, 'foo', {
+    // 描述符主要有两种形式：数据描述符和存取描述符
+});
