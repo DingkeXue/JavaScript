@@ -14,10 +14,10 @@
         let timeId = null;
         return function () {
             // 每次触发该函数时将之前的计时清零后重新计时
-            let that = this, args = arguments;
+            let args = arguments;
             clearTimeout(timeId);
             timeId = setTimeout(() => {
-                callback.call(that, args);
+                callback(args);
             }, delay);
         }
     }
