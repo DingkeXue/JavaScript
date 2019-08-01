@@ -33,5 +33,7 @@ Object.entries(obj);  // [["foo", "FOO"], ["bar", "BAR"]]
 
 /*ES5 中 Object.defineProperty(target, key, descriptor)*/
 Object.defineProperty(obj, 'foo', {
-    // 描述符主要有两种形式：数据描述符和存取描述符
+    // 描述符主要有两种形式：数据描述符和存取描述符。共有的是以下两个
+    configurable: true,  // 该属性描述符是否可改变、是否可删除
+    enumerable: true,  // 是否可枚举
 });
