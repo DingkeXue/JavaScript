@@ -3,12 +3,38 @@
 * 最小数组两两按大小顺序合并，直到并为原来数组大小。
 * 时间复杂度为：O(nlogn)
 * */
+// 归并排序
+function mergeSort(arr) {
+    let len = arr.length;
+    if (len < 2) return arr;
+    let middle = Math.floor(len / 2), left = arr.slice(0, middle), right = arr.slice(middle);
+    return merge(mergeSort(left), mergeSort(right));
+}
+function merge(left, right) {
+    let result = [];
+    while (left.length && right.length) {
+        if (left[0] <= right[0]) {
+            result.push(left.shift());
+        } else {
+            result.push(right.shift());
+        }
+    }
+    while (left.length) {
+        result.push(left.shift());
+    }
+    while (right.length) {
+        result.push(right.shift());
+    }
+    return result;
+}
+console.log('归并',mergeSort([1, 23, 45, 5, 6]));
+
 // 递归实现归并排序
-function mergeSort(arr, first, last, temp) {
+function mergeSort2(arr, first, last, temp) {
     if (first < last) {
         let mid = Math.floor((first + last) / 2);
-        mergeSort(arr, first, mid, temp); // 左边数组
-        mergeSort(arr, mid+1, last, temp); // 右边数组
+        mergeSort2(arr, first, mid, temp); // 左边数组
+        mergeSort2(arr, mid+1, last, temp); // 右边数组
         arr = mergeArray(arr, first, mid, last, temp);
     }
     return arr;
@@ -37,5 +63,5 @@ function mergeArray(arr, first, mid, last, temp) {
 
 let arr = [1, 23, 45, 5, 6];
 let temp = [];
-let sort = mergeSort(arr, 0, arr.length - 1, temp);
+let sort = mergeSort2(arr, 0, arr.length - 1, temp);
 console.log(sort);
