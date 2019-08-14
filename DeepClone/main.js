@@ -1,7 +1,8 @@
 /*
 * 深复制：判断属性是否属于 object 后者 array，如果属于，递归复制；不属于，直接复制
 * */
-function deepClone(origin, target={}) {
+function deepClone(origin, target = {}) {
+    target = origin.constructor === Array ? [] : {};
     // 遍历origin中的key
     for(let key in origin) {
         // 看改属性是否是对象上而不是原型上的
