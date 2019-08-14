@@ -1,0 +1,19 @@
+/*========使用animation动画实现=======*/
+.content {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid #666666;
+    animation: loops 9s infinite;
+}
+@keyframes loops {
+    0% {
+        background-image: url("https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1565789570&di=22dff7909ea23b5289ebd46a0a5812cf&src=http://img2.cache.netease.com/pet/2015/7/3/2015070317040566407.jpg");
+    }
+    50% {
+        background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565799732762&di=1dc0f0d3bf48acd4492c74bccbb64d40&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2Fc75c10385343fbf29d21a7bcb07eca8065388f1b.jpg");
+    }
+    100% {
+        background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565799732761&di=3743a45558511136a2c6e1f9fdbeae82&imgtype=0&src=http%3A%2F%2Fgss0.baidu.com%2F-Po3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F35a85edf8db1cb13aa45bf48db54564e92584bb9.jpg");
+    }
+}
