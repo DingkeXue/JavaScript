@@ -19,3 +19,9 @@
     height: 1px;
     background: linear-gradient(180deg, #fff, #000);
 }
+
+/*方法三：box-shadow*/
+.box-shadow {
+    height: 1px;
+    box-shadow: 0 .5px 0 #000;
+}
