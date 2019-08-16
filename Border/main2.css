@@ -1,6 +1,7 @@
 /*
 * 高清屏下画 .5px 线的问题。.5px 相当于高清屏物理像素的 1px
 */
+/*方法一：使用transform*/
 .item {
     background: #000;
     height: 1px;
@@ -13,6 +14,7 @@
     transform-origin: 50% 100%;
 }
 
+/*方法二：使用线性渐变*/
 .gradient {
     height: 1px;
     background: linear-gradient(180deg, #fff, #000);
