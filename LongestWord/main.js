@@ -21,4 +21,4 @@ function getLongestWord(str, sperator=' ') {
     return longestWord;
 }
 
-console.log(getLongestWord('i am su.'));
+console.log(getLongestWord('i am super.'));

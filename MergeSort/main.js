@@ -19,12 +19,13 @@ function merge(left, right) {
             result.push(right.shift());
         }
     }
-    while (left.length) {
-        result.push(left.shift());
-    }
     while (right.length) {
         result.push(right.shift());
     }
+    while (left.length) {
+        result.push(left.shift());
+    }
+
     return result;
 }
 console.log('归并',mergeSort([1, 23, 45, 5, 6]));

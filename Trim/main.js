@@ -10,11 +10,11 @@ function trim(str, position) {
         case 'both':
             return str.replace(/^\s*|\s*$/g, '');
         case 'middle':
-            return str.match(/(^\s*)/g)[0] + str.match(/(\s*$)/g)[0] + str.replace(/\s*/g, '');
+            return str.match(/(^\s*)/g)[0] + str.replace(/\s*/g, '') + str.match(/(\s*$)/g)[0];
         default:
             return str.replace(/\s*/g, '');
     }
 }
 
-console.log('trim:', trim('       sd  d', 'middle'));
+console.log('trim:', trim('       s d  d    ', 'middle'), 1);
 

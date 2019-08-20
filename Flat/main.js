@@ -25,7 +25,7 @@ console.log(arr2.myFlat()); // [2, 3, 4, 5, 6]
 
 // 方法二：有传参的问题
 Array.prototype.Flat = function(num = 1) {
-    if (!Number(num) || Number(num) < 0) {
+    if (!Number(num) || Number(num) <= 0) {
         return this;
     }
     let result = [];
@@ -38,7 +38,7 @@ Array.prototype.Flat = function(num = 1) {
     });
     return result;
 };
-console.log([1, [2, [4]]].Flat(3));
+console.log('有参数',[1, [2, [4, [5]]]].Flat(1));
 
 // 方法三 : 利用toString() 方法将数组转换成字符串再用 split 方法将字符串分割成类数组，最后将字符串转换成数
 Array.prototype.myFlat2 = function () {

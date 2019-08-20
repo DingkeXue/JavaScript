@@ -70,7 +70,7 @@
     // 一开始就加载在视窗内的图片
     start();
 
-    // 节流函数
+    // 防抖函数
     let timer = null;
     $(window).on('scroll', function () {
         if (timer) {
@@ -79,7 +79,7 @@
         timer = setTimeout(() => {
             start();
         }, 200)
-    })
+    });
 
     // 加载函数
     function start() {
