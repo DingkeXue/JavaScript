@@ -4,16 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/Border/main.css" line="109" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddea77c3-b7f3-4f67-b890-5b212c23dafa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeepClone/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/DeepClone/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flat/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Flat/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LazyLoad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/LazyLoad/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LazyLoad/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/LazyLoad/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LongestWord/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/LongestWord/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeSort/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/MergeSort/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trim/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Trim/main.js" afterDir="false" />
-    </list>
+    <list default="true" id="ddea77c3-b7f3-4f67-b890-5b212c23dafa" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +15,7 @@
     <session id="1908341726">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="25" />
+          <entry key="project.closed" value="26" />
           <entry key="project.open.time.0" value="7" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.11" value="1" />
@@ -47,7 +38,7 @@
         <counts>
           <entry key="css" value="15" />
           <entry key="html" value="66" />
-          <entry key="js" value="149" />
+          <entry key="js" value="150" />
           <entry key="md" value="1" />
           <entry key="ts" value="1" />
         </counts>
@@ -56,7 +47,7 @@
         <counts>
           <entry key="CSS" value="15" />
           <entry key="HTML" value="66" />
-          <entry key="JavaScript" value="149" />
+          <entry key="JavaScript" value="150" />
           <entry key="Markdown" value="1" />
           <entry key="TypeScript" value="1" />
         </counts>
@@ -80,7 +71,20 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MergeSort/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -187,7 +191,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566113811268" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../meituan" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -244,17 +248,17 @@
       <workItem from="1565786538990" duration="4484000" />
       <workItem from="1565939042199" duration="6279000" />
       <workItem from="1566042033085" duration="18674000" />
-      <workItem from="1566194180028" duration="2790000" />
+      <workItem from="1566194180028" duration="3445000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160037000" />
+    <option name="totallyTimeSpent" value="160692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2777778" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2777778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -269,7 +273,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.24153847" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.24153847" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -568,13 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MergeSort/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Slider/main.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -661,6 +658,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MergeSort/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
