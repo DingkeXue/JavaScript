@@ -19,11 +19,11 @@ function ajax(url) {
 }
 
 /*打印属性*/
-const promise = new Promise(((resolve, reject) => {
+const promise = new Promise((resolve, reject) => {
     console.log('a');
     resolve();
     console.log('b');
-}));
+});
 promise.then(() => {
     console.log('c');
 });
