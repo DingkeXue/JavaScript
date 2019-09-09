@@ -24,7 +24,7 @@ function Parent00(name) {
 let person2 = new Parent00('lbb');
 console.log(person2.getName());
 
-// 原型继承缺点：所有的属性和方法都共享，不能初始化参数
+// 原型链继承缺点：所有的属性和方法都共享，不能初始化参数
 function Parent1() {}
 Parent1.prototype.say = function (msg) {
   console.log(msg);
@@ -63,6 +63,13 @@ let b2 = new Children2('foo', 18);
 a2.say();
 b2.say();
 b2.sayAge();
+
+// 原型式继承
+function object(o) {
+    function F() {}
+    F.prototype = o;
+    return new F();
+}
 
 // 寄生组合继承
 function inheritPrototype(sub, sup) {
