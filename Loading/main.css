@@ -1,0 +1,38 @@
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    height: 30px;
+    padding-bottom: 10px;
+    background:gray;
+}
+
+#article {
+    overflow: scroll;
+    position: relative;
+    height: 100vh;
+}
+
+#ul {
+    position: absolute;
+    list-style: none;
+    top: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#text {
+    border: none;
+    line-height: 0;
+    height: 30px;
+}
+
+.li {
+    display: flex;
+    justify-content: center;
+    line-height: 80px;
+    height: 80px;
+    border-bottom: 1px solid tomato;
+}
