@@ -14,7 +14,17 @@ function addLi() {
         let li = document.createElement('li');
         li.className = 'li';
         li.innerHTML = num++;
-        fragment.appendChild(fragment);
+        fragment.appendChild(li);
     }
     ul.appendChild(fragment);
 }
+
+div.addEventListener('scroll', function () {
+    if (div.scrollHeight - div.scrollTop < 1000 && isLoad === false) {
+        isLoad = true;
+        addLi();
+        setTimeout(function () {
+            isLoad = false;
+        }, 50) // 节流
+    }
+}, false);
