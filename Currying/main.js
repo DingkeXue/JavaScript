@@ -13,6 +13,30 @@ function curryingAdd(x) {
 console.log(add(1, 2));  // 3
 console.log(curryingAdd(1)(2)); // 3
 
+
+/*========================最终ES5=====================*/
+function curry(fn) {
+    // args用来接收 fn 中所有的参数，n 用来记录传参的个数
+    let args = [], n = fn.length;
+    return function add() {
+        let arg = [].slice.call(arguments);
+        args = args.concat(arg);
+        n -= arg.length;
+        return  n === 0? fn.apply(null, args) : add;
+    }
+}
+// 使用
+let Add = curry(function (a, b, c, d) {
+    return a + b + c + d;
+});
+console.log('Add', Add(1, 2)(3)(4));  // 10
+
+/*====================ES6===================*/
+const curry6 = (fn, n = fn.length, args = []) => n === 0 ? fn(...args) : (...args1) => curry6(fn, n-args1.length, [...args, ...args1]);
+const add6 = curry6((a, b, c, d) => a + b + c + d);
+console.log('Add6', add6(1, 2)(3)(4));
+
+
 /*
 * add(1)(2)(3) 无限累加器，原理是将add作为函数返回，然后接收新的参数进行计算
 * */
