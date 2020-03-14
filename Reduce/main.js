@@ -10,7 +10,7 @@ console.log(arr2); // 10
 
 // 如果数组中有未定义的值，则直接跳过
 arr = [1, 2, , 4];
-console.log(arr2); // 7
+console.log(arr.reduce((acc, cur)=> acc + cur)); // 7
 
 //给定一个初始值
 let arr3 = [1, 2, 3, 4];
@@ -19,3 +19,36 @@ let arr4 = arr3.reduce((acc, current) => {
 }, 10);
 console.log(arr4); //  20
 
+// reduce + concat 实现 flat 
+let arr5 = [1, [3], [4, 5]];
+function flat(arr) {
+	return arr.reduce((acc, cur) => acc.concat(cur), [])
+}
+console.log(flat(arr5));
+
+// 计算元素出现的次数
+var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+function getCount(arr) {
+	return arr.reduce((acc, cur) => {
+		if(cur in acc) {
+			acc[cur]++;
+		} else {
+			acc[cur] = 1;
+		}
+		return acc;
+	}, {})
+}
+console.log(getCount(names));
+
+// 实现 new Set() 函数
+let arr6 = [1,2,1,2,3,5,4,5,3,4,4,4,4];
+//console.log(new Set(arr6))
+function mySet(arr) {
+	return arr.sort().reduce((acc, cur) => {
+		if(acc.length === 0 || acc[acc.length-1] !== cur) {
+			acc.push(cur);
+		}
+		return acc;
+	}, [])
+}
+console.log(mySet(arr6));
